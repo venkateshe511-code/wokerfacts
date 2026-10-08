@@ -1,13 +1,15 @@
 export async function startCheckout(params: {
   amount: number;
   currency: string;
+  customerEmail?: string;
   metadata?: Record<string, string>;
 }): Promise<void> {
-  const { amount, currency, metadata } = params;
+  const { amount, currency, customerEmail, metadata } = params;
 
   const body = {
     // amount,
     // currency: String(currency).toLowerCase(),
+    customerEmail,
     metadata: {
       ...(metadata || {}),
       source: "web",

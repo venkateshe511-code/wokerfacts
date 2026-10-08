@@ -13,7 +13,8 @@ const getStripe = () => {
 
 export const createCheckoutSession: RequestHandler = async (req, res) => {
   try {
-    const { amount, currency, successUrl, cancelUrl, metadata } = req.body || {};
+    const { amount, currency, customerEmail, successUrl, cancelUrl, metadata } =
+      req.body || {};
 
     if (!amount || !currency) {
       return res.status(400).json({ error: "Missing amount or currency" });
@@ -24,6 +25,7 @@ export const createCheckoutSession: RequestHandler = async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       payment_method_types: ["card"],
+      ...(customerEmail ? { customer_email: customerEmail } : {}),
       line_items: [
         {
           price_data: {

@@ -65,12 +65,13 @@ const CURRENCY = "usd";
 
 router.post("/createCheckoutSession", async (req, res) => {
   try {
-    const { successUrl, cancelUrl, metadata } = req.body || {};
+    const { customerEmail, successUrl, cancelUrl, metadata } = req.body || {};
 
     const stripe = getStripe();
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       payment_method_types: ["card"],
+      ...(customerEmail ? { customer_email: customerEmail } : {}),
       line_items: [
         {
           price_data: {
