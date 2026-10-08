@@ -340,6 +340,7 @@ export default function Dashboard() {
               await startCheckout({
                 amount: 25,
                 currency: "USD",
+                customerEmail: user?.email || undefined,
                 metadata: {
                   reportId,
                   evaluatorId: selectedProfileId || "",
