@@ -543,8 +543,10 @@ export default function TestData() {
       "shoulder-flexion": "Shoulder Flexion",
       "shoulder-abduction": "Shoulder Abduction",
       "hip-flexion": "Hip Flexion",
-      "wrist-muscle-flexion": "Wrist Muscle-Palmar Flexion",
-      "wrist-muscle-extension": "Wrist Muscle-Dorsiflexion",
+      "wrist-muscle-flexion": "Wrist Flexion (Flexor Carpi Radialis & Ulnaris)",
+      "wrist-muscle-extension": "Wrist Extension (Extensor Carpi Radialis & Ulnaris)",
+      "wrist-muscle-radial-deviation": "Wrist Abduction / Radial Deviation (Flexor/Extensor Carpi Radialis)",
+      "wrist-muscle-ulnar-deviation": "Wrist Adduction / Ulnar Deviation (Flexor/Extensor Carpi Ulnaris)",
       "shoulder-muscle-internal-rotation": "Shoulder Muscle Internal Rotation",
       "dynamic-lift-low": "Dynamic Frequent Lift Low",
       "dynamic-lift-mid": "Dynamic Frequent Lift Mid",
@@ -670,10 +672,10 @@ export default function TestData() {
       "shoulder-muscle-adduction": "Shoulder Adduction",
       "shoulder-muscle-internal-rotation": "Shoulder Internal Rotation",
       "shoulder-muscle-external-rotation": "Shoulder External Rotation",
-      "wrist-muscle-flexion": "Wrist Palmar Flexion",
-      "wrist-muscle-extension": "Wrist Dorsiflexion",
-      "wrist-muscle-radial-deviation": "Wrist Radial Deviation",
-      "wrist-muscle-ulnar-deviation": "Wrist Ulnar Deviation",
+      "wrist-muscle-flexion": "Wrist Flexion (Flexor Carpi Radialis & Ulnaris)",
+      "wrist-muscle-extension": "Wrist Extension (Extensor Carpi Radialis & Ulnaris)",
+      "wrist-muscle-radial-deviation": "Wrist Abduction / Radial Deviation (Flexor/Extensor Carpi Radialis)",
+      "wrist-muscle-ulnar-deviation": "Wrist Adduction / Ulnar Deviation (Flexor/Extensor Carpi Ulnaris)",
       "ankle-muscle-dorsiflexion": "Ankle Dorsiflexion",
       "ankle-muscle-plantar-flexion": "Ankle Plantar Flexion",
       "ankle-muscle-eversion": "Ankle Eversion",
@@ -1048,8 +1050,10 @@ export default function TestData() {
         "cervical-flexion": "Cervical Flexion",
         "hip-abduction": "Hip Abduction",
         "shoulder-flexion": "Shoulder Flexion",
-        "wrist-muscle-flexion": "Wrist Muscle-Palmar Flexion",
-        "wrist-muscle-extension": "Wrist Muscle-Dorsiflexion",
+        "wrist-muscle-flexion": "Wrist Flexion (Flexor Carpi Radialis & Ulnaris)",
+      "wrist-muscle-extension": "Wrist Extension (Extensor Carpi Radialis & Ulnaris)",
+      "wrist-muscle-radial-deviation": "Wrist Abduction / Radial Deviation (Flexor/Extensor Carpi Radialis)",
+      "wrist-muscle-ulnar-deviation": "Wrist Adduction / Ulnar Deviation (Flexor/Extensor Carpi Ulnaris)",
         "shoulder-muscle-internal-rotation":
           "Shoulder Muscle Internal Rotation",
         "dynamic-lift-low": "Dynamic Frequent Lift Low",
@@ -1235,10 +1239,10 @@ export default function TestData() {
         "shoulder-muscle-adduction": "Shoulder Adduction",
         "shoulder-muscle-internal-rotation": "Shoulder Internal Rotation",
         "shoulder-muscle-external-rotation": "Shoulder External Rotation",
-        "wrist-muscle-flexion": "Wrist Palmar Flexion",
-        "wrist-muscle-extension": "Wrist Dorsiflexion",
-        "wrist-muscle-radial-deviation": "Wrist Radial Deviation",
-        "wrist-muscle-ulnar-deviation": "Wrist Ulnar Deviation",
+        "wrist-muscle-flexion": "Wrist Flexion (Flexor Carpi Radialis & Ulnaris)",
+        "wrist-muscle-extension": "Wrist Extension (Extensor Carpi Radialis & Ulnaris)",
+        "wrist-muscle-radial-deviation": "Wrist Abduction / Radial Deviation (Flexor/Extensor Carpi Radialis)",
+        "wrist-muscle-ulnar-deviation": "Wrist Adduction / Ulnar Deviation (Flexor/Extensor Carpi Ulnaris)",
         "ankle-muscle-dorsiflexion": "Ankle Dorsiflexion",
         "ankle-muscle-plantar-flexion": "Ankle Plantar Flexion",
         "ankle-muscle-eversion": "Ankle Eversion",
@@ -2174,15 +2178,6 @@ export default function TestData() {
                   )}
                   {isLiftTest && (
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                      <div className="bg-blue-400 text-white p-3 rounded text-center sm:col-span-2">
-                        <div className="text-sm">Coefficient Of Variation</div>
-                        <div className="text-xl font-bold">
-                          {calculateCoefficientOfVariation(
-                            currentTest.leftMeasurements,
-                          )}
-                          %
-                        </div>
-                      </div>
                       {(() => {
                         const avg = calculateAverage(
                           currentTest.leftMeasurements,

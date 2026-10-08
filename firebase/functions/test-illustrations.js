@@ -186,25 +186,25 @@ const map = {
   "wrist-muscle-flexion": [
     {
       src: `${BASE}/Wrist_Muscle_Test_Palmar_Flexion.jpg`,
-      label: "Wrist Palmar Flexion",
+      label: "Wrist Flexion (Flexor Carpi Radialis & Ulnaris)",
     },
   ],
   "wrist-muscle-extension": [
     {
       src: `${BASE}/Wrist_Muscle_Test_Dorsiflexion.jpg`,
-      label: "Wrist Dorsiflexion",
+      label: "Wrist Extension (Extensor Carpi Radialis & Ulnaris)",
     },
   ],
   "wrist-muscle-radial-deviation": [
     {
       src: `${BASE}/Wrist_Muscle Test_Radial_Deviation.jpg`,
-      label: "Wrist Radial Deviation",
+      label: "Wrist Abduction / Radial Deviation (Flexor/Extensor Carpi Radialis)",
     },
   ],
   "wrist-muscle-ulnar-deviation": [
     {
       src: `${BASE}/Wrist_Muscle_Test_Ulnar_Deviation.jpg`,
-      label: "Wrist Ulnar Deviation",
+      label: "Wrist Adduction / Ulnar Deviation (Flexor/Extensor Carpi Ulnaris)",
     },
   ],
 
