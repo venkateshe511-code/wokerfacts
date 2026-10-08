@@ -2178,15 +2178,6 @@ export default function TestData() {
                   )}
                   {isLiftTest && (
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                      <div className="bg-blue-400 text-white p-3 rounded text-center sm:col-span-2">
-                        <div className="text-sm">Coefficient Of Variation</div>
-                        <div className="text-xl font-bold">
-                          {calculateCoefficientOfVariation(
-                            currentTest.leftMeasurements,
-                          )}
-                          %
-                        </div>
-                      </div>
                       {(() => {
                         const avg = calculateAverage(
                           currentTest.leftMeasurements,
