@@ -252,10 +252,22 @@ const testGroups = {
       name: "Wrist (Muscle Test)",
       id: "wrist-muscle-test",
       tests: [
-        { id: "wrist-muscle-flexion", name: "Palmar Flexion" },
-        { id: "wrist-muscle-extension", name: "Dorsiflexion" },
-        { id: "wrist-muscle-radial-deviation", name: "Radial Deviation" },
-        { id: "wrist-muscle-ulnar-deviation", name: "Ulnar Deviation" },
+        {
+          id: "wrist-muscle-flexion",
+          name: "Wrist Flexion (Flexor Carpi Radialis & Ulnaris)",
+        },
+        {
+          id: "wrist-muscle-extension",
+          name: "Wrist Extension (Extensor Carpi Radialis & Ulnaris)",
+        },
+        {
+          id: "wrist-muscle-radial-deviation",
+          name: "Wrist Abduction / Radial Deviation (Flexor/Extensor Carpi Radialis)",
+        },
+        {
+          id: "wrist-muscle-ulnar-deviation",
+          name: "Wrist Adduction / Ulnar Deviation (Flexor/Extensor Carpi Ulnaris)",
+        },
       ],
     },
     {
