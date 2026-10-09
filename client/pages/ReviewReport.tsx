@@ -4459,7 +4459,7 @@ export default function ReviewReport() {
                                                       {trialAverageDisplay}
                                                     </td>
                                                     <td className="border border-gray-400 border-r-gray-400 p-2">
-                                                      {leftCV}%
+                                                      -
                                                     </td>
                                                     <td className="border border-gray-400 border-r-gray-400 p-2">
                                                       {currentDate}

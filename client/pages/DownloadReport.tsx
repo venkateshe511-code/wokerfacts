@@ -5021,7 +5021,7 @@ padding-top: 120px; align-items: center; min-height: 0; ">
                                                         ) / 10;
                                                   return avg.toFixed(1);
                                                 })()}</td>
-                                                <td style="border: 1px solid #333; border-right: 1px solid #333; padding: 6px;text-align: center;">${leftCV}%</td>
+                                                <td style="border: 1px solid #333; border-right: 1px solid #333; padding: 6px;text-align: center;">-</td>
                                                 <td style="border: 1px solid #333; border-right: 1px solid #333; padding: 6px;text-align: center;">${currentDate}</td>
                                             </tr>
                                         </tbody>
