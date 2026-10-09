@@ -4014,6 +4014,10 @@ export default function ReviewReport() {
                           resolveDynamicEndpointLabel(test);
                         const isDynamicLift =
                           isLiftTest && testName.includes("dynamic");
+                        const isFrequentOrInfrequentDynamicLift = [
+                          "Dynamic Frequent Lift",
+                          "Dynamic Infrequent Lift",
+                        ].some((name) => test.testName.startsWith(name));
 
                         const { convertToLbs, displayUnit } =
                           resolveWeightDisplayOptions(test);
@@ -4459,7 +4463,9 @@ export default function ReviewReport() {
                                                       {trialAverageDisplay}
                                                     </td>
                                                     <td className="border border-gray-400 border-r-gray-400 p-2">
-                                                      -
+                                                      {isFrequentOrInfrequentDynamicLift
+                                                        ? "-"
+                                                        : `${leftCV}%`}
                                                     </td>
                                                     <td className="border border-gray-400 border-r-gray-400 p-2">
                                                       {currentDate}
