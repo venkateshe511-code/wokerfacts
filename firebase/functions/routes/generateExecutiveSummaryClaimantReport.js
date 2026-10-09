@@ -8559,11 +8559,17 @@ async function addTestDataContent(children, body, gender, age) {
               : Number.isFinite(rightAvg)
                 ? rightAvg.toFixed(1)
                 : "-";
-            const cvValue = Number.isFinite(leftCV)
-              ? `${leftCV.toFixed(0)}%`
-              : Number.isFinite(rightCV)
-                ? `${rightCV.toFixed(0)}%`
-                : "-";
+            const isFrequentOrInfrequentDynamicLift = [
+              "Dynamic Frequent Lift",
+              "Dynamic Infrequent Lift",
+            ].some((name) => safeName.startsWith(name));
+            const cvValue = isFrequentOrInfrequentDynamicLift
+              ? "-"
+              : Number.isFinite(leftCV)
+                ? `${leftCV.toFixed(0)}%`
+                : Number.isFinite(rightCV)
+                  ? `${rightCV.toFixed(0)}%`
+                  : "-";
 
             // Helper to make bordered cell
             const makeCell = (text, { bold = false, shaded = false } = {}) =>
